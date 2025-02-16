@@ -29,9 +29,32 @@
 		30D340C02D61EA3200A0CEF7 /* LandmarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandmarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		30D340D72D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CircleImage.swift,
+				MapView.swift,
+			);
+			target = 30D340B52D61EA3200A0CEF7 /* LandmarksTests */;
+		};
+		30D340D82D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CircleImage.swift,
+				MapView.swift,
+			);
+			target = 30D340BF2D61EA3200A0CEF7 /* LandmarksUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		30D340A72D61EA3100A0CEF7 /* Landmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				30D340D72D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */,
+				30D340D82D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */,
+			);
 			path = Landmarks;
 			sourceTree = "<group>";
 		};
