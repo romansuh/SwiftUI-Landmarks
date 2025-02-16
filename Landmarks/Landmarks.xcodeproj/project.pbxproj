@@ -30,42 +30,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		30D340D72D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */ = {
+		30D341342D6204A600A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CircleImage.swift,
-				MapView.swift,
+				Lib/Lib.swift,
+				Model/Landmark.swift,
+				Model/ModelData.swift,
+				Views/LandmakImage.swift,
+				Views/LandmarkDetails.swift,
+				Views/LandmarkList.swift,
+				Views/LandmarkRow.swift,
+				Views/MapView.swift,
 			);
 			target = 30D340B52D61EA3200A0CEF7 /* LandmarksTests */;
 		};
-		30D340D82D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */ = {
+		30D341352D6204A600A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CircleImage.swift,
-				MapView.swift,
+				Lib/Lib.swift,
+				Model/Landmark.swift,
+				Model/ModelData.swift,
+				Views/LandmakImage.swift,
+				Views/LandmarkDetails.swift,
+				Views/LandmarkList.swift,
+				Views/LandmarkRow.swift,
+				Views/MapView.swift,
 			);
 			target = 30D340BF2D61EA3200A0CEF7 /* LandmarksUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		30D340A72D61EA3100A0CEF7 /* Landmarks */ = {
+		30D341222D6204A600A0CEF7 /* Landmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				30D340D72D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */,
-				30D340D82D61EED400A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */,
+				30D341342D6204A600A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksTests" target */,
+				30D341352D6204A600A0CEF7 /* Exceptions for "Landmarks" folder in "LandmarksUITests" target */,
 			);
 			path = Landmarks;
-			sourceTree = "<group>";
-		};
-		30D340B92D61EA3200A0CEF7 /* LandmarksTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LandmarksTests;
-			sourceTree = "<group>";
-		};
-		30D340C32D61EA3200A0CEF7 /* LandmarksUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LandmarksUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -98,10 +100,8 @@
 		30D3409C2D61EA3100A0CEF7 = {
 			isa = PBXGroup;
 			children = (
-				30D340A72D61EA3100A0CEF7 /* Landmarks */,
-				30D340B92D61EA3200A0CEF7 /* LandmarksTests */,
-				30D340C32D61EA3200A0CEF7 /* LandmarksUITests */,
 				30D340A62D61EA3100A0CEF7 /* Products */,
+				30D341222D6204A600A0CEF7 /* Landmarks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +131,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				30D340A72D61EA3100A0CEF7 /* Landmarks */,
+				30D341222D6204A600A0CEF7 /* Landmarks */,
 			);
 			name = Landmarks;
 			packageProductDependencies = (
@@ -153,9 +153,6 @@
 			dependencies = (
 				30D340B82D61EA3200A0CEF7 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				30D340B92D61EA3200A0CEF7 /* LandmarksTests */,
-			);
 			name = LandmarksTests;
 			packageProductDependencies = (
 			);
@@ -175,9 +172,6 @@
 			);
 			dependencies = (
 				30D340C22D61EA3200A0CEF7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				30D340C32D61EA3200A0CEF7 /* LandmarksUITests */,
 			);
 			name = LandmarksUITests;
 			packageProductDependencies = (
@@ -425,8 +419,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -462,8 +456,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
