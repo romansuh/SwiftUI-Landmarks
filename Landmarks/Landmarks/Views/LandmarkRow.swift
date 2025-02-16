@@ -18,21 +18,24 @@ struct LandmarkRow: View {
                 .clipShape(
                     .rect(cornerRadius: 10)
                 )
-            
+
             Text(landmark.name)
-            
+
             Spacer()
+
+            if landmark.isFavorite {
+                Image(systemName: "mappin.circle.fill")
+                    .foregroundStyle(.red)
+                    .font(.title)
+            }
         }.padding()
     }
 }
 
 #Preview {
-    Group {
+    let landmarks = ModelData().landmarks
+    return Group {
         LandmarkRow(landmark: landmarks[0])
         LandmarkRow(landmark: landmarks[1])
     }
-}
-
-#Preview("Silver Salmon Creek") {
-    LandmarkRow(landmark: landmarks[1])
 }
