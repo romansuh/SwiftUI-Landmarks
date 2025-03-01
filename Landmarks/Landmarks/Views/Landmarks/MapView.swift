@@ -11,9 +11,10 @@ import SwiftUI
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
 
-    var body: some View {Map(position: .constant(.region(region))) {
-        Marker("Landmark", coordinate: coordinate)
-    }
+    var body: some View {
+        Map(position: .constant(.region(region))) {
+            Marker("Landmark", coordinate: coordinate)
+        }.modifier(DisableInteractionIfWatchOS())
     }
 
     private var region: MKCoordinateRegion {
@@ -21,6 +22,17 @@ struct MapView: View {
             center: coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
         )
+    }
+}
+
+// Custom view modifier to disable interaction only on watchOS
+struct DisableInteractionIfWatchOS: ViewModifier {
+    func body(content: Content) -> some View {
+        #if os(watchOS)
+            content.allowsHitTesting(false)  // Disables scroll & interaction on watchOS
+        #else
+            content  // Keep normal behavior on other platforms
+        #endif
     }
 }
 
